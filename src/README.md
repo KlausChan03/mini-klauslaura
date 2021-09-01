@@ -27,7 +27,7 @@ npm install -g @vue/cli
 **使用正式版**（对应HBuilderX最新正式版）
 
 ```
-vue create -p dcloudio/uni-preset-vue my-project
+vue create -p dcloudio/uni-preset-vue mini-klaus&laura
 ```
 
 **使用alpha版**（对应HBuilderX最新alpha版）
@@ -44,7 +44,7 @@ vue create -p dcloudio/uni-preset-vue#alpha my-alpha-project
 
 创建好后，进入项目目录
 ```
-cd my-project
+cd mini-klaus&laura
 ```
 
 执行该命令运行到 h5 端

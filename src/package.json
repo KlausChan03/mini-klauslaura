@@ -20,7 +20,10 @@
 		"url": "https://github.com/dcloudio/hello-uniapp/issues"
 	},
 	"homepage": "https://github.com/dcloudio/hello-uniapp#readme",
-	"dependencies": {},
+	"dependencies": {
+		"less-loader": "^10.0.1",
+    "sass-loader": "^10"
+	},
 	"dcloudext": {
 		"category": [
 			"前端页面模板",

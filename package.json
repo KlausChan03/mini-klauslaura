@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "mini-klauslaura",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -59,13 +59,17 @@
     "@dcloudio/uni-stat": "^2.0.0-32220210818002",
     "@vue/shared": "^3.0.0",
     "core-js": "^3.6.5",
+    "dayjs": "^1.10.5",
     "flyio": "^0.6.2",
+    "lodash": "^4.17.21",
     "regenerator-runtime": "^0.12.1",
+    "sass-loader": "10.1.1",
     "vue": "^2.6.11",
     "vuex": "^3.2.0"
   },
   "devDependencies": {
     "@babel/runtime": "~7.12.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@dcloudio/types": "*",
     "@dcloudio/uni-automator": "^2.0.0-32220210818002",
     "@dcloudio/uni-cli-shared": "^2.0.0-32220210818002",
@@ -79,8 +83,13 @@
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-plugin-import": "^1.11.0",
+    "commitizen": "^4.2.4",
+    "commitlint": "^13.1.0",
     "cross-env": "^7.0.2",
+    "husky": "^7.0.2",
     "jest": "^25.4.0",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
@@ -92,5 +101,10 @@
   ],
   "uni-app": {
     "scripts": {}
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

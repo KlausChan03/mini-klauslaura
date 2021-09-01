@@ -1,4 +1,4 @@
-# my-project
+# mini-klaus&laura
 
 ## Project setup
 ```
