@@ -2,10 +2,12 @@
 
 [![Version](https://img.shields.io/badge/version-0.1_beta-green.svg?style=flat-square)]()
 [![Author](https://img.shields.io/badge/author-KlausChan-blue.svg?style=flat-square)](https://klauslaura.cn)
-
+[![GitHub stars](https://img.shields.io/github/stars/KlausChan03/klauslab.svg?style=social)](https://github.com/KlausChan03/mini-klauslaura/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/KlausChan03/klauslab.svg?style=social)](https://github.com/KlausChan03/mini-klauslaura/network/members)
 # Info
 
 - Item Name: KlausLab
+- Item URI: [https://github.com/KlausChan03/mini-klauslaura](https://github.com/KlausChan03/mini-klauslaura)
 - Description: mini program KlausLab by KlausChan (the free version)
 - Version: 0.1
 - Author: KlausChan
