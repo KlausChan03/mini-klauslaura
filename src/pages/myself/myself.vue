@@ -1,6 +1,9 @@
 <template name="user">
 	<view class="page myself-page">
-		<view class="cu-bar bg-white solid-bottom margin-top">
+		<cu-custom bgColor="#0081FF">
+			<block slot="content" style="color:#FFFFFF">个人中心</block>
+		</cu-custom>
+		<view class="cu-bar bg-white solid-bottom">
 			<view class="action">
 				<text class="cuIcon-title text-orange "></text> 我的记录
 			</view>
@@ -26,8 +29,7 @@
 		<view class="padding flex flex-direction" v-if="false">
 			<button class="cu-btn bg-blue lg" open-type="doWeixinGetUserInfo" bindtap="doWeixinGetUserInfo" lang="zh_CN" @click="doWeixinGetUserInfo">登录</button>
 		</view>
-		<view class="cu-load load-modal" v-if="!ifShowContent">
-			<view class="cuIcon-emojifill text-orange"></view>
+		<view class="cu-load load-modal col-48e" v-if="!ifShowContent">
 			<view class="gray-text">Loading...</view>
 		</view>
 	</view>
@@ -102,7 +104,9 @@
 			}
 		},
 		mounted() {
-			this.ifShowContent = true
+			setTimeout(() => {
+				this.ifShowContent = true				
+			}, 300);
 		},
 		methods: {
 			goListPage(pageName) {
@@ -140,7 +144,7 @@
 							password: 'roger0629'
 						},
 						success: res => {
-							debugger
+							// debugger
 							// if (res.data && res.data.data) {
 							// 	let data = res.data.data
 							// 	let token = data.token;
@@ -204,8 +208,6 @@
 		height: 100vh;
 		/* #endif */
 		height: 100%;
-		padding-bottom: 100rpx;
-		padding-top: 100rpx;
 
 		.user-avatar {
 			width: 88rpx;

@@ -5,7 +5,7 @@
 			<block slot="content">观看记录</block>
 		</cu-custom>
 		<scroll-view class="scroll-v list" style="height: 100vh;" @scroll="scroll" enableBackToTop="true" scroll-y @scrolltolower="loadMore()">
-			<view class="cu-timeline" v-for="(item,index) in recordList">
+			<view class="cu-timeline" v-for="(item,index) in recordList" :key="index">
 				<view class="cu-time">{{item.date}}</view>
 				<view class="cu-item text-red">
 					<view class="content shadow-blur" :class="item.bg">
@@ -15,37 +15,12 @@
 						<view class="content-main">
 							{{item.remark}}
 						</view>
-					</view>
-					
+					</view>					
 				</view>
-				<!-- <view class="cu-item cur cuIcon-noticefill">
-					<view class="content bg-green shadow-blur">
-						<text>22:22</text> 【广州市】快件已到达地球
-					</view>
-				</view>
-				<view class="cu-item text-red cuIcon-attentionforbidfill">
-					<view class="content bg-red shadow-blur">
-						这是第一次，我家的铲屎官走了这么久。久到足足有三天！！
-					</view>
-				</view>
-				<view class="cu-item text-grey cuIcon-evaluate_fill">
-					<view class="content bg-grey shadow-blur">
-						这是第一次，我家的铲屎官走了这么久。
-					</view>
-				</view>
-				<view class="cu-item text-blue">
-					<view class="bg-blue content">
-						<text>20:00</text> 【月球】快件已到达月球，准备发往地球
-					</view>
-					<view class="bg-cyan content">
-						<text>10:00</text> 【银河系】快件已到达银河系，准备发往月球
-					</view>
-				</view> -->
 			</view>
 		</scroll-view>
 		<view class="cu-load bg-blue" v-if="loadingMoreFlag" :class="!isOver?'loading':'over'"></view>
-		<view class="cu-load load-modal" v-if="!ifShowContent">
-			<view class="cuIcon-emojifill text-orange"></view>
+		<view class="cu-load load-modal col-48e" v-if="!ifShowContent">
 			<view class="gray-text">Loading...</view>
 		</view>
 	</view>

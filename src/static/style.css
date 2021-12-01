@@ -417,6 +417,11 @@
   font-size: 14px !important;
 }
 
+
+.fs-15 {
+  font-size: 15px !important;
+}
+
 .fs-16 {
   font-size: 16px !important;
 }
@@ -667,4 +672,20 @@
 
 .mt-30 {
   margin-top: 30px;
+}
+
+.col-d42 {
+	color: #d42;
+}
+
+.col-48e {
+	color: #48e;
+}
+
+.col-abf {
+	color: #abf;
+}
+
+.col-bbb {
+	color: #bbb;
 }

@@ -1095,7 +1095,7 @@ button.cuIcon.lg {
 	border-top: 6upx solid rgba(0, 0, 0, 0.05);
 	border-right: 6upx solid rgba(0, 0, 0, 0.05);
 	border-bottom: 6upx solid rgba(0, 0, 0, 0.05);
-	border-left: 6upx solid #f37b1d;
+	border-left: 6upx solid #48e;
 	animation: cuIcon-spin 1s infinite linear;
 	z-index: -1;
 }
