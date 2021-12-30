@@ -24,7 +24,7 @@ import iconfont from '@/components/iconfont/iconfont'
 export default {
 	data() {
 		return {
-			PageCur: 'home',
+			PageCur: 'myself',
 		}
 	},
 	components: {

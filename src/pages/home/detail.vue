@@ -20,6 +20,10 @@
 							<span class="col-bbb flex-hl-vc"> 	<iconfont name="lalaksks-pen-nib mr-5" ></iconfont> {{ posts.post_metas.author }}</span>
 							<span class="ml-10 col-bbb flex-hl-vc"> 	<iconfont name="lalaksks-calendar mr-5" ></iconfont> {{ posts.date | formateDate }}</span>
 						</div>
+						<view class="flex-hl-vc col-bbb" v-if="posts.post_metas.address">
+							<text class="cuIcon-location mr-5"></text>
+							{{ posts.post_metas.address }}
+						</view>
 						<div class="flex-hr-vc">
 							<span class="col-bbb" >字数统计 {{ posts.post_count.text_num }} 字</span >
 							<span class="ml-10 col-bbb" >预计阅读时长 {{ posts.post_count.read_time }} 分钟</span >

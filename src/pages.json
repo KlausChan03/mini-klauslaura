@@ -29,6 +29,12 @@
         "navigationBarTitleText": "观影",
         "enablePullDownRefresh": false
       }
+    }, {
+      "path": "pages/info/info",
+      "style": {
+        "navigationBarTitleText": "简介",
+        "enablePullDownRefresh": false
+      }
     }
   ],
   "globalStyle": {

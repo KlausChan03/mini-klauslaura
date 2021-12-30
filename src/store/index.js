@@ -28,6 +28,7 @@ const store = createStore({
 		login(state, provider) {
 			state.hasLogin = true;
 			state.loginProvider = provider;
+			console.log(state)
 		},
 		logout(state) {
 			state.hasLogin = false

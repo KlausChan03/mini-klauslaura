@@ -5,7 +5,7 @@
 /* 父元素-flex容器 */
 
 .flex {
-  display: box;
+  
 
   /* OLD - Android 4.4- */
 
@@ -33,7 +33,7 @@
 /* 父元素-横向排列（主轴） */
 
 .flex-h {
-  display: box;
+  
 
   /* OLD - Android 4.4- */
 
@@ -73,7 +73,7 @@
 /* 父元素-纵向排列（主轴） */
 
 .flex-v {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -145,7 +145,7 @@
 /*flex 水平居中&垂直居中 兼容写法*/
 
 .flex-hc-vc {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -168,7 +168,7 @@
 /*flex 水平居左&垂直居中 兼容写法*/
 
 .flex-hl-vc {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -191,7 +191,7 @@
 /*flex 水平居左&垂直居左 兼容写法*/
 
 .flex-hl-vl {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -214,7 +214,7 @@
 /*flex 水平居右&垂直居中 兼容写法*/
 
 .flex-hr-vc {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -237,7 +237,7 @@
 /*flex 水平等间距排列，首尾不留白&垂直居中 兼容写法*/
 
 .flex-hb-vc {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -260,7 +260,7 @@
 /*flex 水平等间距排列，首尾留白&垂直居中 兼容写法*/
 
 .flex-ha-vc {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -281,7 +281,7 @@
 }
 
 .flex-hb-vt {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -304,7 +304,7 @@
 /*主轴是垂直*/
 
 .flex-hc-vl {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -325,7 +325,7 @@
 }
 
 .flex-hc-vr {
-  display: box;
+  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -688,4 +688,16 @@
 
 .col-bbb {
 	color: #bbb;
+}
+
+.col-333 {
+	color: #333;
+}
+
+.col-555 {
+	color: #555;
+}
+
+.col-777 {
+	color: #777;
 }

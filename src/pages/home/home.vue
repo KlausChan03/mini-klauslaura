@@ -40,23 +40,28 @@
 				@scrolltolower="loadMore()"
 			>
 				<view v-if="0 == currentTab && ifShowContent" class="text-center">
-					<view
-						v-for="(item, index) in listOfArticle"
-						:key="index"
+					<view						
 						class="cu-card article"
 						:class="isCard ? 'no-card' : ''"
 					>
-						<view class="cu-item shadow" @click="goDetail(item)">
+						<view class="cu-item shadow p-0 flex-hl-vc" >
+							你好,{{ isLogin ? userInfo.nickName : '游客'}}
+						</view>
+						<view v-for="(item, index) in listOfArticle" :key="index" class="cu-item shadow" @click="goDetail(item)">
 							<view class="title">
-								<view class="text-cut">{{ item.title.rendered }}</view>
+								<view class="text-cut col-333">{{ item.title.rendered }}</view>
 							</view>
 							<view class="content">
 								<view class="desc">
 									<view
-										class="text-content"
+										class="text-content col-555"
 										v-html="item.excerpt.rendered"
 										:id="item.id"
 									>
+									</view>
+									<view class="flex-hc-vc fs-12 col-777" v-if="item.post_metas.address">
+										<text class="cuIcon-location mr-5"></text>
+										{{ item.post_metas.address }}
 									</view>
 									<view class="flex-hb-vc flex-hw mt-10">
 										<view>
@@ -120,15 +125,19 @@
 					>
 						<view class="cu-item shadow">
 							<view class="title" v-if="item.title.rendered">
-								<view class="text-cut">#{{ item.title.rendered }}#</view>
+								<view class="text-cut col-333">#{{ item.title.rendered }}#</view>
 							</view>
 							<view class="content">
-								<view class="desc">
+								<view class="desc col-555">
 									<view
 										class="text-content"
 										v-html="item.content.rendered"
 										:id="item.id"
 									>
+									</view>
+									<view class="flex-hc-vc fs-12 col-777" v-if="item.post_metas.address">
+										<text class="cuIcon-location mr-5"></text>
+										{{ item.post_metas.address }}
 									</view>
 									<view class="flex-hb-vc flex-hw mt-10">
 										<view>
@@ -201,6 +210,8 @@ export default {
 	data() {
 		return {
 			site_url: 'https://klauslaura.cn',
+			isLogin: false,
+			userInfo: {},
 			listOfChat: [],
 			listOfArticle: [],
 			listOfmovie: [],
@@ -215,8 +226,22 @@ export default {
 			navigateFlag: false
 		}
 	},
-	mounted() {
+	async mounted() {
+		const self = this
+		await uni.getStorage({
+			key: 'isLogin',
+			success: (res) => {
+				self.isLogin = res.data
+			},
+		})
+		await uni.getStorage({
+			key: 'userInfo',
+			success: (res) => {
+				self.userInfo = res.data
+			},
+		})
 		this.getAllArticle()
+		
 	},
 
 	filters: {
@@ -277,7 +302,6 @@ export default {
 				url: `${this.site_url}/wp-json/wp/v2/posts`,
 				data: params,
 				success: (res) => {
-					// console.log(res)
 					if (this.page === 1) {
 						this.ifShowContent = true
 					}
@@ -302,7 +326,7 @@ export default {
 							element.excerpt.rendered = element.excerpt.rendered
 								.replace(/<p([\s\w"=\/\.:;]+)((?:(style="[^"]+")))/gi, '<p')
 								.replace(/<p([\s\w"=\/\.:;]+)((?:(class="[^"]+")))/gi, '<p')
-								.replace(/<p>/gi, '<p class="p_class">')
+								.replace(/<p>/gi, '<p class="p_class col-555">')
 								.replace(/flex-hb-vc/gi, 'flex')
 								.replace(/<img/gi, '<img class="img_class"')
 						}
@@ -401,7 +425,11 @@ export default {
 				margin-bottom: 0;
 				margin-left: 30rpx;
 				margin-right: 30rpx;
-
+				.title {
+					view {
+						font-size: 16px;
+					}
+				}
 				.content {
 					.text-content {
 						height: auto;
